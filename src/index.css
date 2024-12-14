@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #fbf8ef;
+  --dark-blue: #1f2937;
+  --blue: #78b3ce;
+  --light-blue: #c9e6f0;
+  --amber: #f96e2a;
+  font-family: 'Poppins', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(---dark-blue);
+  user-select: none;
+}
+
+a.active {
+  color: var(--amber);
+}
+
+@media screen and (max-width: 480px) {
+  .banner-container {
+    background: none !important;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 7px; 
+  height: 7px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-blue); 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(---dark-blue) 
+}

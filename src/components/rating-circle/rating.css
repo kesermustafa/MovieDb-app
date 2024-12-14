@@ -1,0 +1,38 @@
+.rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .rating-circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(
+            #458ae6 calc(var(--rating) * 36deg),
+            #afacac calc(var(--rating) * 36deg)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fill-mask 1s step-end;
+  
+  }
+  
+  .rating-circle::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-color: #e0f6b8;
+    border-radius: 50%;
+  }
+  
+  .rating-text {
+    position: relative;
+    font-size: 1.1rem;
+  
+  }
