@@ -58,8 +58,16 @@ a.active {
   position: absolute;
   width: 100%;
   height: 100%;
-
   bottom: 0px ;
+}
 
-
+.right-ln{
+  background-image: linear-gradient(90deg, rgba(246, 244, 246, 0.1) 1%, rgba(251,248,239,1) 100%);
+  filter: blur(10px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  right: 0;
+  width: 60px;
 }

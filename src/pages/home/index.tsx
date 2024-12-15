@@ -10,7 +10,7 @@ const Home = () => {
         <Hero />
       </div>
       <div className="relative">
-        <div className=" max-sm:hidden !bg-[linear-gradient(270deg,rgba(251,248,239,1)5%,rgba(251,248,239,0.7)100%)] blur absolute top-0 bottom-0 right-0 !z-20 w-[50px]"></div>
+        <div className=" max-sm:hidden right-ln "></div>
 
         <div className="my-20 md:px-8  max-sm:ml-2">
           <h1 className="text-2xl lg:text-3xl font-semibold text-center mb-6">
