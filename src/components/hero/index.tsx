@@ -27,7 +27,8 @@ const Hero = () => {
         backgroundBlendMode: 'overlay',
       }}
     >
-      <div className="h-full w-full banner-ln bottom-0 absolute"></div>
+   {/*   <div className="h-full w-full bg-[linear-gradient(180deg,rgba(31,41,55,0.1)60%,rgba(251,248,239,1)100%)] bottom-0 absolute"></div>*/}
+      <div className="banner-ln"></div>
       <div className="absolute inset-0 bg-[var(--dark-blue)] blur-3xl opacity-60 max-sm:hidden"></div>
 
       <h1 className="text-lg md:text-2xl lg:text-3xl text-white z-30 font-bold italic max-lg:px-4">
