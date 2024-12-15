@@ -27,7 +27,7 @@ const Hero = () => {
         backgroundBlendMode: 'overlay',
       }}*/
     >
-        <img className={'object-cover w-full h-full'} src={`${imageURL + movie?.backdrop_path}`} alt=""/>
+        <img className={'object-cover w-full h-full -z-50'} src={`${imageURL + movie?.backdrop_path}`} alt=""/>
       {/*<div className="h-full w-full bg-[linear-gradient(180deg,rgba(31,41,55,0.1)60%,rgba(251,248,239,1)100%)] bottom-0 absolute"></div>*/}
       <div className="banner-ln"></div>
       <div className="absolute inset-0 bg-[var(--dark-blue)] blur-3xl opacity-60 max-sm:hidden"></div>
