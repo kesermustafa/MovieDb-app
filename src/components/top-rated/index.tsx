@@ -6,12 +6,11 @@ import Loader from '../../pages/loader';
 import { useGetTopRatedMoviesQuery } from '../../redux/slice/topRatedSlice';
 import { useAppDispatch, useAppSelector } from '../../utils/hooks';
 import { MovieType } from '../../utils/types';
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide';
-
 import { addFavorite, removeFavorite } from '../../redux/slice/favoritesSlice';
 import { Link } from 'react-router-dom';
+
 interface TopRatedProps {
   topRated: string;
 }

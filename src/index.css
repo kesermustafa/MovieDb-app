@@ -19,7 +19,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   background-color: var(--bg-color);
-  color: var(---dark-blue);
+  color: var(--dark-blue);
   user-select: none;
 }
 

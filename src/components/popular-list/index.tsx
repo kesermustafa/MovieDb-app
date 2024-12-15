@@ -1,10 +1,7 @@
 import React from 'react';
 import { useGetMoviesQuery } from '../../redux/slice/movieSlice';
 import { MovieType, PopularType } from '../../utils/types';
-
 import {Splide, SplideSlide} from "@splidejs/react-splide";
-
-
 import { Link } from 'react-router-dom';
 import {
   BsFillBookmarkPlusFill,
