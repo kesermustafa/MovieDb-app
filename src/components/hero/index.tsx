@@ -18,7 +18,7 @@ const Hero = () => {
   }, []);
   return (
     <div
-      className="h-[60vh] relative flex justify-center items-center"
+      className="h-[60vh] relative -z-10 flex justify-center items-center"
       style={{
         backgroundImage: `url(${imageURL + movie?.backdrop_path})`,
         backgroundSize: 'cover',
