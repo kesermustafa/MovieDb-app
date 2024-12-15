@@ -19,16 +19,8 @@ const Hero = () => {
   return (
     <div
       className="h-[60vh] relative -z-50 flex justify-center items-center"
-/*      style={{
-        backgroundImage: `url(${imageURL + movie?.backdrop_path})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundBlendMode: 'overlay',
-      }}*/
     >
-        <img className={'object-cover w-full h-full -z-50'} src={`${imageURL + movie?.backdrop_path}`} alt=""/>
-      {/*<div className="h-full w-full bg-[linear-gradient(180deg,rgba(31,41,55,0.1)60%,rgba(251,248,239,1)100%)] bottom-0 absolute"></div>*/}
+       <img className={'object-cover w-full h-full -z-50'} src={`${imageURL + movie?.backdrop_path}`} alt=""/>
       <div className="banner-ln z-1"></div>
       <div className="absolute inset-0 bg-[var(--dark-blue)] z-10  blur-3xl opacity-60 max-sm:hidden"></div>
 
