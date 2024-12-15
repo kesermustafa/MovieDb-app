@@ -5,7 +5,6 @@ import { GenresType, MovieType } from '../../utils/types';
 import Loader from '../../pages/loader';
 import api from '../../utils/api';
 
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide';
 
@@ -86,9 +85,8 @@ const TrendingGenres: React.FC = () => {
             }}
           >
             {movies.map((movie, index) => (
-              <SplideSlide key={movie.id} className="">
+              <SplideSlide  key={movie.id} className="">
                 <div
-                  key={movie.id}
                   className="bg-gray-800 p-4 rounded-lg relative"
                 >
                   <div className="absolute end-3 ">

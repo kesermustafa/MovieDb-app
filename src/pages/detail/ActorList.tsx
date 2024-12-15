@@ -2,7 +2,7 @@ import { imageURL } from '../../utils/constants';
 import { CastType } from '../../utils/types';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import '@splidejs/react-splide';
 
 type Props = {
   actors: CastType[];

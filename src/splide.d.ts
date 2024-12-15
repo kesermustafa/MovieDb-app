@@ -1,11 +1,18 @@
 declare module '@splidejs/react-splide' {
-	import { ComponentProps } from 'react';
-	import { Splide as SplideCore, Options } from '@splidejs/splide';
+	import React from 'react';
 	
-	export interface SplideProps extends ComponentProps<'div'> {
-		options?: Options;
+	export interface SplideProps extends React.HTMLAttributes<HTMLDivElement> {
+		options?: any;
+		children?: React.ReactNode;
+		[key: string]: any;
+	}
+	
+	export interface SplideSlideProps extends React.HTMLAttributes<HTMLDivElement> {
+		children?: React.ReactNode;
+		key?: number | string;
+		[key: string]: any;
 	}
 	
 	export const Splide: React.ComponentType<SplideProps>;
-	export const SplideSlide: React.ComponentType;
+	export const SplideSlide: React.ComponentType<SplideSlideProps>;
 }

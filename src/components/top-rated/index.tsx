@@ -38,7 +38,7 @@ const TopRatedMovies = () => {
       {data?.map((movie: MovieType) => (
         <SplideSlide key={movie.id} className="">
           <div
-            key={movie.id}
+          
             className="bg-[var(--blue)] p-4 rounded-lg relative "
           >
             <div className="absolute end-3 ">

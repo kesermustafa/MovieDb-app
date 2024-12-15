@@ -2,8 +2,8 @@ import React from 'react';
 import { useGetMoviesQuery } from '../../redux/slice/movieSlice';
 import { MovieType, PopularType } from '../../utils/types';
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide';
+import {Splide, SplideSlide} from "@splidejs/react-splide";
+
 
 import { Link } from 'react-router-dom';
 import {
@@ -43,8 +43,8 @@ const PopularList: React.FC<MovieListProps> = ({ category }) => {
       }}
     >
       {data?.results.map((movie: MovieType) => (
-        <SplideSlide key={movie.id} className="">
-          <div key={movie.id} className="bg-gray-800 p-4 rounded-lg relative">
+        <SplideSlide key={movie.id}>
+          <div  className="bg-gray-800 p-4 rounded-lg relative">
             <div className="absolute end-3 ">
               {!isFavorite(movie.id) ? (
                 <BsFillBookmarkPlusFill

@@ -26,6 +26,7 @@ const Info = ({ movie }: ButtonProps) => {
         <div className="w-full  h-full flex flex-col sm:flex-row relative sm:gap-3 sm:pt-8">
           <div className="flex justify-center ">
             <img
+                alt={movie.title}
               src={imageURL + movie.poster_path}
               className="object-cover rounded-sm shadow max-w-[320px]"
             />
@@ -39,7 +40,7 @@ const Info = ({ movie }: ButtonProps) => {
             </div>
             <div className="flex gap-3 items-center flex-wrap">
               {movie.genres.map((genre, key) => (
-                <span className="italic " key={key}>
+                <span className="italic " key={genre.id}>
                   {genre.name}
                 </span>
               ))}
@@ -50,8 +51,8 @@ const Info = ({ movie }: ButtonProps) => {
             </div>
             <div className="flex gap-2">
               <p>Spoken Languages : </p>
-              {movie.spoken_languages.map((item) => (
-                <span>{item.name}</span>
+              {movie.spoken_languages.map((item, key) => (
+                <span key={key}>{item.name}</span>
               ))}
             </div>
             <div className="text-justify lg:w-3/4">

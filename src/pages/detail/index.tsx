@@ -12,8 +12,7 @@ const Detail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState<MovieDetailType | null>(null);
   const [error, setError] = useState<string | null>(null);
-  console.log(id);
-  console.log(movie);
+
 
   useEffect(() => {
     const params = {
