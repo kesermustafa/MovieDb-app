@@ -17,10 +17,8 @@ const MovieCard: React.FC<Props> = ({ category, movie }) => {
 	
 	const dispatch = useAppDispatch();
 	const favorites = useAppSelector((state) => state.favorites.favorites);
-	const location = useLocation();
-	
 	const isFavorite = (id: number) => favorites.some((movie) => movie.id === id);
-	const isFavoritesPage = location.pathname === '/favorites';
+
 	
 	const handleFavoriteClick = () => {
 		if (isFavorite(movie.id)) {
@@ -31,14 +29,6 @@ const MovieCard: React.FC<Props> = ({ category, movie }) => {
 	};
 	
 	const BookmarkIcon = () => {
-		if (isFavoritesPage) {
-			return (
-				<BsFillBookmarkDashFill
-					className="text-4xl text-red-500 cursor-pointer"
-					onClick={() => dispatch(removeFavorite(movie.id))}
-				/>
-			);
-		}
 		
 		return isFavorite(movie.id) ? (
 			<BsFillBookmarkHeartFill
