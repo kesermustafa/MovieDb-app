@@ -32,7 +32,7 @@ const MovieCard: React.FC<Props> = ({category, movie}: Props) => {
 					isFavoritesPage ? (<BsFillBookmarkDashFill
 						className="text-4xl text-red-500 cursor-pointer"
 						onClick={() => dispatch (removeFavorite (movie.id))}
-					/>) : !isFavorite (movie.id) ? (
+					/>) : (!isFavorite (movie.id) ? (
 						<BsFillBookmarkPlusFill
 							className="text-4xl text-white cursor-pointer"
 							onClick={() =>
@@ -50,7 +50,7 @@ const MovieCard: React.FC<Props> = ({category, movie}: Props) => {
 									: dispatch (addFavorite (movie))
 							}
 						/>
-					)
+					))
 				}
 			</div>
 			
