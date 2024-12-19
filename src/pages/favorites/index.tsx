@@ -5,19 +5,19 @@ import { BsFillBookmarkDashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const FavoritesPage = () => {
-  const {favorites} = useAppSelector((state) => state.favorites);
-
-  const dispatch = useAppDispatch();
-
-  if (favorites.length === 0) {
+    const favorites = useAppSelector((state) => state.favorites.favorites); // Access favorites safely
+    const dispatch = useAppDispatch();
+    
+   
+  if (!favorites || favorites.length === 0) {
     return (
       <div className="h-[80vh] flex flex-col items-center justify-center gap-10">
         <p>No favorite movies added yet.</p>
         <h3>
-          You can visit{' '}
+          You can visit
           <Link to="/" className="text-blue-600 font-semibold">
             home page
-          </Link>{' '}
+          </Link>
           to create favorites.
         </h3>
       </div>
