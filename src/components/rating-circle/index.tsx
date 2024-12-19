@@ -1,4 +1,5 @@
 import './rating.css';
+import React from "react";
 
 type Props = {
   rating: number;
