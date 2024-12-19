@@ -29,10 +29,12 @@ const MovieCard: React.FC<Props> = ({category, movie}: Props) => {
 			<div className="absolute end-3 ">
 				
 				{
-					isFavoritesPage ? (<BsFillBookmarkDashFill
-						className="text-4xl text-red-500 cursor-pointer"
-						onClick={() => dispatch (removeFavorite (movie.id))}
-					/>) : (!isFavorite (movie.id) ? (
+					isFavoritesPage ? (<div className='absolute top-0 right-0 '>
+						<BsFillBookmarkDashFill
+							className="text-4xl text-red-500 cursor-pointer"
+							onClick={() => dispatch (removeFavorite (movie.id))}
+						/>
+					</div>) : (!isFavorite (movie.id) ? (
 						<BsFillBookmarkPlusFill
 							className="text-4xl text-white cursor-pointer"
 							onClick={() =>
