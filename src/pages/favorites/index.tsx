@@ -5,7 +5,7 @@ import { BsFillBookmarkDashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const FavoritesPage = () => {
-    const favorites = useAppSelector((state) => state.favorites.favorites); // Access favorites safely
+    const favorites = useAppSelector((state) => state.favorites.favorites);
     const dispatch = useAppDispatch();
     
    
