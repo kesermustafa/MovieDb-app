@@ -1,18 +1,17 @@
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import api from '../../utils/api';
-import Error from '../error';
 import Loader from '../loader';
 import Button from './Button';
 import Info from './Info';
 import ActorList from './ActorList';
 import {MovieDetailType} from '../../utils/types';
+import Undefined from "../undefined";
 
 const Detail = () => {
 	const {id} = useParams ();
 	const [movie, setMovie] = useState<MovieDetailType | null> (null);
 	const [error, setError] = useState<string | null> (null);
-	
 	
 	useEffect (() => {
 		const params = {
@@ -23,9 +22,9 @@ const Detail = () => {
 			.get (`/movie/${id}`, {params})
 			.then ((res) => setMovie (res.data))
 			.catch ((err) => setError (err));
-	}, []);
+	}, [id]);
 	
-	if (error) return <div>Error</div>;
+	if (error) return <Undefined/>;
 	if (!movie) return <Loader/>;
 	
 	return (
